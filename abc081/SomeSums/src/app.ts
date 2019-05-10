@@ -2,7 +2,7 @@ import * as fs from 'fs';
 
 let Main = (i: string): number => {
   let input = i.split(' ').map((v) => v)
-  let N = [...Array(parseInt(input[0]) + 1).keys()].filter((v) => v != 0).map((v) => v.toString())
+  let N = Array.from({length : parseInt(input[0]) + 1}, (v, x) => x).filter((v) => v != 0).map((v) => v.toString())
   let A = parseInt(input[1])
   let B = parseInt(input[2])
   return N.map((v) => {
