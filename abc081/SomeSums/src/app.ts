@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-let Main = (i: string): number => {
+export let Main = (i: string): number => {
   let input = i.split(' ').map((v) => v)
   let N = Array.from({length : parseInt(input[0]) + 1}, (v, x) => x).filter((v) => v != 0).map((v) => v.toString())
   let A = parseInt(input[1])
@@ -11,4 +11,4 @@ let Main = (i: string): number => {
   }).reduce((v, x) => x += v)
 }
 
-console.log(Main(fs.readFileSync('/dev/stdin', 'utf8')))
+// console.log(Main(fs.readFileSync('/dev/stdin', 'utf8')))
